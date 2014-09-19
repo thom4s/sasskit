@@ -1,0 +1,101 @@
+/* 
+ * Define all variables for our application : color, fonts, border...
+ * 
+ * @package sassy-thomy
+ */
+
+$main_width: 980px;
+$mobile_first: true !default;
+
+
+// Grays
+// -------------------------
+$black:              	   						#000 !default;
+$gray_darker:            						#222 !default;
+$gray_dark:              						#333 !default;
+$gray:                 	 						#555 !default;
+$gray_light:             						#999 !default;
+$gray_lighter:           						#eee !default;
+$white:               	 						#fff !default;
+
+// Colors
+// -------------------------
+$blue:                  						#049cdb !default;
+$blue_dark:              						#0064cd !default;
+
+
+// Basic colors
+// -------------------------
+$color_text:           							$gray_dark !default;
+$color_link:            						$blue !default;
+$color_link_hover:      						lighten($color_link, 30%) !default;
+$color_quote:												$gray_light;
+$color_body_background: 						$white;
+
+
+// Typography
+// -------------------------
+$font_family_sans:        					Arial, Helvetica, sans-serif !default;
+$font_family_serif:       					Georgia, Times New Roman, serif !default;
+$font_family_mono:        					Menlo, Consolas, monospace !default;		
+
+$font_family_paragraph:							'', $font_family_serif;
+$font_family_title:									'', $font_family_sans;
+$font_family_nav: 									'', $font_family_serif;
+$font_family_alt:										'', $font_family_serif;
+
+$font_size_base:          					16px !default;
+$line_height_ratio:									1.375 !default;
+$base_line_height:        					$font_size_base * $line_height_ratio !default; 
+
+$font_size_large:         					$font_size_base * 1.25 !default;
+$font_size_small:        						$font_size_base * 0.85 !default;
+$font_size_mini:       						  $font_size_base * 0.75 !default;
+
+
+
+// Forms
+// -------------------------
+
+$input_border_radius:             	0 !default;
+$form_actions_background:        		$blue !default;
+
+$input_disabled_background:					$gray_lighter !default;
+$input_border:											1px solid $black !default;
+$input_background:               		$white !default;
+$input_height:                  		$base_line_height * 1.5;
+
+$placeholder_text:         					$gray_light !default;
+
+
+
+// Navigation
+// -------------------------
+
+$navbar_background:									$black !default;
+$navbar_border:              				darken($navbar_background, 12%) !default;
+$navbar_height:              				$base_line_height !default;
+
+$navbar_collapse_width:           	979px !default;
+$navbar_collapse_desktop_width:   	$navbar_collapse_width + 1;
+
+$navbar_height:                    	40px !default;
+$navbar_backgroundHighlight:       	#ffffff !default;
+
+$navbar_text:                     	#777 !default;
+$navbar_link_color:                 #777 !default;
+$navbar_link_color_hover:           $gray_dark !default;
+$navbar_link_color_active:          $gray !default;
+$navbar_link_background_hover:      transparent !default;
+$navbar_link_background_active:     darken($navbar_background, 5%) !default;
+
+$navbar_brand_color:                $navbar-link_color !default;
+
+
+
+// Tables
+// -------------------------
+$table_background:                  transparent !default;
+$table_background_accent:           $gray_light !default; // for striping
+$table_background_hover:            $gray_dark !default;
+$table_border:                      $gray_dark !default;

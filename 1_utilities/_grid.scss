@@ -1,0 +1,79 @@
+
+/*  
+ * VARIABLES
+ */
+$cols:      12 !default;
+$gutter:    2% !default;
+$medium_breakpoint: 760px !default;
+$large_breakpoint:  980px !default;
+$wide_breakpoint:   1200px !default;
+
+
+$one_col: (100% - ($gutter * ($cols - 1))) / $cols;
+
+
+/* 
+ * MIXINS
+ */
+@mixin cols($num) {
+    width: ($one_col * $num) + ($gutter * ($num - 1));
+    border: 1px solid;
+}
+ 
+@mixin sub_cols($num_child, $num_parent) {
+    $parent_size: ($one_col * $num_parent) + ($gutter * ($num_parent - 1));
+    $child_size: ($one_col * $num_child) + ($gutter * ($num_child - 1));
+    margin-left: ($gutter / $parent_size) * 100%;
+    width: ($child_size / $parent_size) * 100%;
+}
+
+@mixin parse-columns($suffix: ''){
+    .row {
+        @for $i from 1 through $cols {
+            .col#{$suffix}-#{$i} {
+                @include cols($i);
+                float: left;
+                margin-left: $gutter;
+
+                @for $j from 1 through ($i - 1) {
+                    .col-s-#{$j} {
+                        @include sub_cols($j, $i);
+                    }
+                }
+            }
+            .col#{$suffix}-center { margin: 0 auto; float: none; }
+            .col#{$suffix}-push-#{$i} { left: $i / $cols * 100%; }
+            .col#{$suffix}-pull-#{$i} { right: $i / $cols * 100%; }
+            .hide#{$suffix} { display: none; }
+            .show#{$suffix} { display: block; }
+        }
+    }
+}
+
+/* 
+ * CLASSES
+ */
+.first { margin-left: 0 !important; }
+.last { float: right !important; }
+
+.row {
+    @include clearfix;
+    > :first-child, .row > :first-child { margin-left: 0 !important; }
+}
+
+/* 
+ * COLUMNS & NESTED COLUMNS
+ */
+
+@include parse-columns('-s');
+
+@include at-least(medium) {
+    @include parse-columns('-m');
+}
+@include at-least(large) {
+    @include parse-columns('-l');
+}
+@include at-least(wide) {
+    @include parse-columns('-w');
+}
+
