@@ -1,45 +1,15 @@
-//
-// MIXINS
-// from here : http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
-// from bootstrap
-// from Inuit.scss
-// forme https://github.com/ry5n/rem
-// --------------------------------------------------
+/* 
+ * Mixins
+ * 
+ * @package sasskit
+ *
+ * from here : http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+ * from bootstrap
+ * from Inuit.scss
+ * forme https://github.com/ry5n/rem
+ *
+ */
 
-
-/****************************************************
-*   SOMMAIRE
-* 
-*   LAYOUT
-*       abs-centered () + abs-centered-fixed () + abs-centered-responsive ()  
-*       abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto)
-*       center-block()
-*       clearfix()
-*       box-sizing($type: "border")
-* 
-*
-*   STYLES
-*       opacity($opacity)
-*       box-shadow($shadow...)
-*       transition($transition...) + transition-delay($delay...) + transition-duration($duration...)
-*       Transformations : rotate($degrees) + scale($ratio) + translate($x, $y) +  skew($x, $y) + translate3d($x, $y, $z)
-*       border-radius($radius) + single side border-top-radius($radius)
-*       placeholder($color: $placeholderText)
-*       tab-focus()
-*       Shadow mixin (http://codepen.io/hugo/pen/xzjGB)
-*       shade($type, $color: #3498db, $depth: 20, $angle: 135deg, $long: false, $fade: false) 
-*
-* 
-*   HACK
-*      ie7-inline-block()
-*
-*
-*   ELSE
-*      Retina Images : image-2x($image, $width, $height)
-*      vendor($property, $value...) (Inuit.scss)
-*      keyframe ($animation-name) (Inuit.scss)
-*
-****************************************************/
 
 
 // Responsive Breakpoints

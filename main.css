@@ -371,41 +371,24 @@ td,
 th {
   padding: 0; }
 
-/****************************************************
-*   SOMMAIRE
-* 
-*   LAYOUT
-*       abs-centered () + abs-centered-fixed () + abs-centered-responsive ()  
-*       abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto)
-*       center-block()
-*       clearfix()
-*       box-sizing($type: "border")
-* 
-*
-*   STYLES
-*       opacity($opacity)
-*       box-shadow($shadow...)
-*       transition($transition...) + transition-delay($delay...) + transition-duration($duration...)
-*       Transformations : rotate($degrees) + scale($ratio) + translate($x, $y) +  skew($x, $y) + translate3d($x, $y, $z)
-*       border-radius($radius) + single side border-top-radius($radius)
-*       placeholder($color: $placeholderText)
-*       tab-focus()
-*       Shadow mixin (http://codepen.io/hugo/pen/xzjGB)
-*       shade($type, $color: #3498db, $depth: 20, $angle: 135deg, $long: false, $fade: false) 
-*
-* 
-*   HACK
-*      ie7-inline-block()
-*
-*
-*   ELSE
-*      Retina Images : image-2x($image, $width, $height)
-*      vendor($property, $value...) (Inuit.scss)
-*      keyframe ($animation-name) (Inuit.scss)
-*
-****************************************************/
+/* 
+ * Mixins
+ * 
+ * @package sasskit
+ *
+ * from here : http://web-design-weekly.com/2013/05/12/handy-sass-mixins/
+ * from bootstrap
+ * from Inuit.scss
+ * forme https://github.com/ry5n/rem
+ *
+ */
 /**
  * Courtesy of @integralist: twitter.com/integralist/status/260484115315437569
+ */
+/* 
+ * Placeholders & utility classes
+ * 
+ * @package sasskit
  */
 /* Block things */
 .left {
@@ -476,6 +459,11 @@ th {
 .text-justify {
   text-align: justify !important; }
 
+/* 
+ * Print styles
+ * 
+ * @package sasskit
+ */
 .print-only {
   display: none !important; }
 
@@ -545,7 +533,7 @@ th {
 /* 
  * Grid system
  * 
- * @package sassykit
+ * @package sasskit
  */
 /* 
  * MIXINS
@@ -2142,6 +2130,11 @@ th {
     display: none; }
   .row .show-w {
     display: block; } }
+/* 
+ * Typography
+ * 
+ * @package sasskit
+ */
 body,
 button,
 input,
@@ -2213,6 +2206,16 @@ small {
 big {
   font-size: 125%; }
 
+/* 
+ * Buttons
+ * 
+ * @package sasskit
+ */
+/* 
+ * Links
+ * 
+ * @package sasskit
+ */
 a {
   color: royalblue; }
 
@@ -2224,6 +2227,11 @@ a:focus,
 a:active {
   color: midnightblue; }
 
+/* 
+ * Forms
+ * 
+ * @package sasskit
+ */
 button,
 input,
 select,
@@ -2331,6 +2339,11 @@ textarea {
   /* Improves readability and alignment in all browsers */
   width: 98%; }
 
+/* 
+ * Lists
+ * 
+ * @package sasskit
+ */
 hr {
   background-color: #ccc;
   border: 0;
@@ -2360,6 +2373,16 @@ dd {
 figure {
   margin: 0; }
 
+/* 
+ * Medias
+ * 
+ * @package sasskit
+ */
+/* 
+ * Tables
+ * 
+ * @package sasskit
+ */
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -2367,6 +2390,11 @@ table {
 th {
   font-weight: bold; }
 
+/* 
+ * Navigation
+ * 
+ * @package sasskit
+ */
 .main-navigation {
   clear: both;
   display: block;
@@ -2435,3 +2463,39 @@ th {
   float: right;
   text-align: right;
   width: 50%; }
+
+/* 
+ * Header
+ * 
+ * @package sasskit
+ */
+/* 
+ * Footer
+ * 
+ * @package sasskit
+ */
+/* 
+ * Sidebar
+ * 
+ * @package sasskit
+ */
+/* 
+ * templates/home
+ * 
+ * @package sasskit
+ */
+/* 
+ * templates/contact
+ * 
+ * @package sasskit
+ */
+/* 
+ * templates/about
+ * 
+ * @package sasskit
+ */
+/* 
+ * templates/post
+ * 
+ * @package sasskit
+ */
