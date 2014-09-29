@@ -391,13 +391,13 @@ th {
  * @package sasskit
  */
 /* Block things */
-.left {
+.u-left {
   float: left !important; }
 
-.right {
+.u-right {
   float: right !important; }
 
-.clearfix {
+.u-clearfix {
   *zoom: 1; }
 
 .clearfix:before, .clearfix:after {
@@ -407,21 +407,21 @@ th {
 .clearfix:after {
   clear: both; }
 
-.hide {
+.u-hide {
   display: none; }
 
-.antialiased {
+.u-antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.plain-width {
+.u-plain-width {
   /* Acceptable values are border, content, and padding - content is the default W3C model */
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   width: 100%; }
 
-.fixed {
+.u-fixed {
   width: 100%;
   left: 0;
   position: fixed;
@@ -447,16 +447,16 @@ th {
   display: block; }
 
 /* Text things */
-.text-left {
+.u-text-left {
   text-align: left !important; }
 
-.text-right {
+.u-text-right {
   text-align: right !important; }
 
-.text-center {
+.u-text-center {
   text-align: center !important; }
 
-.text-justify {
+.u-text-justify {
   text-align: justify !important; }
 
 /* 

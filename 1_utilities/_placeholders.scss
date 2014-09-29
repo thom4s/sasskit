@@ -6,13 +6,13 @@
 
 /* Block things */
 
-.left {
+.#{$utilities-prefix}left {
   float: left !important; }
 
-.right {
+.#{$utilities-prefix}right {
   float: right !important; }
 
-.clearfix {
+.#{$utilities-prefix}clearfix {
   *zoom: 1; }
   .clearfix:before, .clearfix:after {
     content: " ";
@@ -20,18 +20,18 @@
   .clearfix:after {
     clear: both; }
 
-.hide {
+.#{$utilities-prefix}hide {
   display: none; }
 
-.antialiased {
+.#{$utilities-prefix}antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.plain-width {
+.#{$utilities-prefix}plain-width {
     @include box-sizing(border);
     width:100%; }
 
-.fixed {
+.#{$utilities-prefix}fixed {
   width: 100%;
   left: 0;
   position: fixed;
@@ -50,20 +50,20 @@
       z-index: 98;
       margin-top: 45px; }
 
-.js-generated {
+.#{$javascript-hooks-prefix}generated {
   display: block; }
 
 
 /* Text things */
 
-.text-left {
+.#{$utilities-prefix}text-left {
   text-align: left !important; }
 
-.text-right {
+.#{$utilities-prefix}text-right {
   text-align: right !important; }
 
-.text-center {
+.#{$utilities-prefix}text-center {
   text-align: center !important; }
 
-.text-justify {
+.#{$utilities-prefix}text-justify {
   text-align: justify !important; }
