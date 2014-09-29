@@ -7,12 +7,13 @@
  * http://thomasflorentin.net
  */
 
+@import "1_utilities/config-project";
 @import "1_utilities/config";
 @import "1_utilities/normalize";
 @import "1_utilities/mixins";
 @import "1_utilities/placeholders";
 @import "1_utilities/print";
-@import "1_utilities/grid";
+@import "1_utilities/grid"; 
 
 @import "2_atoms/typography";
 @import "2_atoms/buttons";

@@ -1,11 +1,20 @@
 /* 
- * Define all variables for our application : color, fonts, border...
+ * Default settings for config.
  * 
- * @package sassy-thomy
+ * @package sasskit
  */
 
+
+// Grid
+// -------------------------
 $main_width: 980px;
+$cols:      12 !default;
+$gutter:    2% !default;
+
 $mobile_first: true !default;
+$medium_breakpoint: 760px !default;
+$large_breakpoint:  980px !default;
+$wide_breakpoint:   1200px !default;
 
 
 // Grays
@@ -39,10 +48,10 @@ $font_family_sans:        					Arial, Helvetica, sans-serif !default;
 $font_family_serif:       					Georgia, Times New Roman, serif !default;
 $font_family_mono:        					Menlo, Consolas, monospace !default;		
 
-$font_family_paragraph:							'', $font_family_serif;
-$font_family_title:									'', $font_family_sans;
-$font_family_nav: 									'', $font_family_serif;
-$font_family_alt:										'', $font_family_serif;
+$font_family_paragraph:             $paragraphs, $font_family_serif;
+$font_family_title:                 $titles, $font_family_sans;
+$font_family_nav:                   $nav, $font_family_serif;
+$font_family_alt:                   $alt, $font_family_serif;
 
 $font_size_base:          					16px !default;
 $line_height_ratio:									1.375 !default;

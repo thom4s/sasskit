@@ -1,12 +1,9 @@
-
-/*  
- * VARIABLES
+/* 
+ * Grid system
+ * 
+ * @package sassykit
  */
-$cols:      12 !default;
-$gutter:    2% !default;
-$medium_breakpoint: 760px !default;
-$large_breakpoint:  980px !default;
-$wide_breakpoint:   1200px !default;
+
 
 
 $one_col: (100% - ($gutter * ($cols - 1))) / $cols;

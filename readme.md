@@ -5,6 +5,13 @@
 
 Sasskit is a simple reusable (and modest...) kit of sass files for web projects. It is inspired by many systems and thoughts already in use. Nothing's lost, nothing's created, everything's transformed...
 
+### Config
+
+There is a default config.scss file (colors, types, grid).
+You can overwrite it with config-project.scss file : 
+- uncommment the variables you want to use.
+- set fonts family for paragraphs, titles, navigation and alt.
+
 ### Grid
 
 Simple grid works like that : 
