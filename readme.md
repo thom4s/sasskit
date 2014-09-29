@@ -59,7 +59,8 @@ For javascript hooks, use js- prefix :
 
 - [Css structure at Trello](http://blog.trello.com/refining-the-way-we-structure-our-css-at-trello/)
 - [Sass Style Guide - css tricks](http://css-tricks.com/sass-style-guide/)
-
+- [CodePen's CSS](http://codepen.io/chriscoyier/blog/codepens-css)
+- [DoCSSa](http://docssa.info/)
 
 ### todos
 
