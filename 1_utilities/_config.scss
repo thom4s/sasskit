@@ -13,11 +13,12 @@ $javascript-hooks-prefix:           'js-' !default;
 
 // Grid
 // -------------------------
-$main_width:                        980px;
+$max_width:                         980px;
 $cols:                              12 !default;
 $gutter:                            2% !default;
         
 $mobile_first:                      true !default;
+$minimal_breakpoint:                320px !default;
 $medium_breakpoint:                 760px !default;
 $large_breakpoint:                  980px !default;
 $wide_breakpoint:                   1200px !default;

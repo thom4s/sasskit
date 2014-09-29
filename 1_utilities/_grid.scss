@@ -10,9 +10,10 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 
 
 /* 
- * MIXINS
+ * Mixins for the grid to be 
  */
 @mixin cols($num) {
+    @include box-sizing();
     width: ($one_col * $num) + ($gutter * ($num - 1));
     border: 1px solid;
 }
@@ -27,50 +28,66 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 @mixin parse-columns($suffix: ''){
     .row {
         @for $i from 1 through $cols {
-            .col#{$suffix}-#{$i} {
+            .#{$suffix}-#{$i}col {
                 @include cols($i);
                 float: left;
                 margin-left: $gutter;
 
                 @for $j from 1 through ($i - 1) {
-                    .col-s-#{$j} {
+                    .#{$suffix}-#{$j}col {
                         @include sub_cols($j, $i);
                     }
                 }
             }
-            .col#{$suffix}-center { margin: 0 auto; float: none; }
-            .col#{$suffix}-push-#{$i} { left: $i / $cols * 100%; }
-            .col#{$suffix}-pull-#{$i} { right: $i / $cols * 100%; }
-            .hide#{$suffix} { display: none; }
-            .show#{$suffix} { display: block; }
+            .#{$suffix}-#{$i}col-push { left: $i / $cols * 100%; }
+            .#{$suffix}-#{$i}col-pull { right: $i / $cols * 100%; }
         }
+        .#{$suffix}-hide { display: none; }
+        .#{$suffix}-show { display: block; }
+        .#{$suffix}-first { margin-left: 0 !important; }
+        .#{$suffix}-last { float: right !important; }
     }
 }
 
-/* 
- * CLASSES
- */
-.first { margin-left: 0 !important; }
-.last { float: right !important; }
-
 .row {
     @include clearfix;
-    > :first-child, .row > :first-child { margin-left: 0 !important; }
+
+    > :first-child, 
+    .row > :first-child { 
+        margin-left: 0 !important;
+    }
 }
+
+
 
 /* 
  * COLUMNS & NESTED COLUMNS
  */
 
-@include parse-columns('-s');
+@if $mobile_first {
+    @include at-least(minimal) {
+        @include parse-columns('s');
+    }
+    @include at-least(medium) {
+        @include parse-columns('m');
+    }
+    @include at-least(large) {
+        @include parse-columns('l');
+    }
+    @include at-least(wide) {
+        @include parse-columns('w');
+    }
+}
+@else {
+    @include parse-columns('w');
 
-@include at-least(medium) {
-    @include parse-columns('-m');
+    @include up-to(wide) {
+        @include parse-columns('l');
+    }
+    @include up-to(large) {
+        @include parse-columns('m');
+    }
+    @include up-to(medium) {
+        @include parse-columns('s');
+    }
 }
-@include at-least(large) {
-    @include parse-columns('-l');
-}
-@include at-least(wide) {
-    @include parse-columns('-w');
-}
-

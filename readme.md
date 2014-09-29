@@ -15,6 +15,12 @@ You can overwrite it with config-project.scss file :
 
 ### Grid
 
+You'll have to set your grid : general width, number of columns, mobile first, etc.
+
+In case of mobile first you'll always set small things first and your breakpoints mixins will be : @include at-least(medium) {...}
+
+In the contrary, your breakpoints will be @include up-to(medium) {...}
+
 Simple grid works like that : 
 
     <div class="row">

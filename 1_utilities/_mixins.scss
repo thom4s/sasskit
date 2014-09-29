@@ -23,6 +23,21 @@
   @else if $point == medium {
     @media (min-width: $medium_breakpoint) { @content; }
   }
+  @else if $point == minimal {
+    @media (min-width: $minimal_breakpoint) { @content; }
+  }  
+}
+
+@mixin up-to($point) {
+  @if $point == wide {
+    @media (max-width: $wide_breakpoint) { @content; }
+  }
+  @else if $point == large {
+    @media (max-width: $large_breakpoint) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: $medium_breakpoint) { @content; }
+  }
 }
 
 
