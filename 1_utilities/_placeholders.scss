@@ -50,6 +50,14 @@
       z-index: 98;
       margin-top: 45px; }
 
+
+.#{$utilities-prefix}bordered { 
+  border: 1px solid #000;
+}
+
+
+/* JS things */
+
 .#{$javascript-hooks-prefix}generated {
   display: block; }
 

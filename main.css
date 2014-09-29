@@ -443,6 +443,10 @@ th {
   z-index: 98;
   margin-top: 45px; }
 
+.u-bordered {
+  border: 1px solid #000; }
+
+/* JS things */
 .js-generated {
   display: block; }
 
@@ -2493,6 +2497,10 @@ th {
  * 
  * @package sasskit
  */
+.design-element {
+  border-bottom: 1px solid;
+  text-transform: uppercase; }
+
 /* 
  * templates/home
  * 
