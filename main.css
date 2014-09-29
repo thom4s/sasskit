@@ -2480,6 +2480,20 @@ th {
  * @package sasskit
  */
 /* 
+ * templates/layout
+ * 
+ * @package sasskit
+ */
+.wrap {
+  width: 980px;
+  margin: auto; }
+
+/* 
+ * templates/test
+ * 
+ * @package sasskit
+ */
+/* 
  * templates/home
  * 
  * @package sasskit
