@@ -11,6 +11,7 @@ There is a default config.scss file (colors, types, grid).
 You can overwrite it with config-project.scss file : 
 - uncommment the variables you want to use.
 - set fonts family for paragraphs, titles, navigation and alt.
+- set prefix for utilities or js hooks
 
 ### Grid
 
