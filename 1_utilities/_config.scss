@@ -6,21 +6,21 @@
 
 
 // Prefixes
-$utilities-prefix :         'u-' !default;
-$state-prefix:              'is-' !default;
-$javascript-hooks-prefix:   'js-' !default;
+$utilities-prefix :                 'u-' !default;
+$state-prefix:                      'is-' !default;
+$javascript-hooks-prefix:           'js-' !default;
 
 
 // Grid
 // -------------------------
-$main_width: 980px;
-$cols:      12 !default;
-$gutter:    2% !default;
-
-$mobile_first: true !default;
-$medium_breakpoint: 760px !default;
-$large_breakpoint:  980px !default;
-$wide_breakpoint:   1200px !default;
+$main_width:                        980px;
+$cols:                              12 !default;
+$gutter:                            2% !default;
+        
+$mobile_first:                      true !default;
+$medium_breakpoint:                 760px !default;
+$large_breakpoint:                  980px !default;
+$wide_breakpoint:                   1200px !default;
 
 
 // Grays
