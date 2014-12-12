@@ -1,0 +1,206 @@
+<!doctype html>
+<html class="no-js" lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style guide</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <style type="text/css">
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font-family: Helvetica, sans-serif;
+        line-height: auto;
+      }
+
+      .section {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        display: block;
+        float: left;
+        clear: both;
+        margin: 0 0 40px 0;
+      }
+      .section.title {
+        margin: 50px 0;
+      }      
+      .section.half {
+        width: 48%;
+      }
+      .section.half:nth-child(even) {
+        float: left; 
+        clear: both;
+      }
+      .section.half:nth-child(odd) {
+        float: right; 
+        clear: none;
+      }
+      .section.title span {
+        font-size: 3em;
+        display: block;
+        text-align: center;
+        line-height: 1.345em;
+      }
+        .section-name {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #666;
+          display: block;
+          clear: both;
+          margin: 0 0 10px 0;
+          border-bottom: 1px dotted #666;
+        }
+
+
+      .mood-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+        .mood-list li {
+          margin: 0 10px 0 0;
+          padding: 0;
+          display: inline-block;
+          float: left;
+          font-size: 1.6em;
+          font-weight: bold;
+        }
+
+    </style>
+
+
+  </head>
+
+  <body>
+
+    <div class="wrap">
+
+      <!-- TITLE -->
+      <div class="section title">
+        <span class="">Style Guide</span>
+
+      </div>
+
+      <!-- MOOD -->
+      <div class="section half mood">
+        <span class="section-name">Mood</span>
+
+        <ul class="mood-list">
+          <li>Some</li>
+          <li>And other</li>
+        </ul>
+
+      </div><!-- end .mood -->
+
+
+      <!-- TYPOGRAPHY -->
+      <div class="section half typo">
+        <span class="section-name">Typography</span>
+
+        <h1>Heading 1</h1>
+
+        <h2>Heading 2</h2>
+        
+        <h3>Heading 3</h3>
+        
+        <h4>Heading 4</h4>
+        
+        <h5>Heading 5</h5>
+        
+        <h6>Heading 6</h6>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in porta tellus, quis scelerisque lacus. Curabitur volutpat porttitor venenatis. Vestibulum nulla lorem, commodo non dictum nec, ultricies non elit. Ut convallis felis eget turpis interdum cursus. Nulla vel massa vitae erat gravida venenatis.</p>
+
+        <p>Nam at dignissim mi, ut porttitor est. Suspendisse orci massa, congue at leo ac, aliquet mattis est. Vivamus vehicula purus nec lectus suscipit egestas. Praesent tortor felis, hendrerit eget turpis luctus.</p>  
+
+
+      </div><!-- end .typo -->
+
+
+
+
+      <!-- COLORS -->
+      <div class="section half colors">
+        <span class="section-name">Color Palette</span>
+
+
+      </div><!-- end .colors -->
+
+
+
+      <!-- FORMS -->
+      <div class="section half forms">
+        <span class="section-name">Forms</span>
+
+
+      </div><!-- end .forms -->
+
+
+
+
+      <!-- GRID -->
+      <div class="section grid">
+        <span class="section-name">Grid</span>
+
+
+
+        <span>Simple grid</span> 
+        <div class="row">
+          <div class="u-bordered s-12col m-6col l-12col">col-s-4 / col-m-6</div>
+          <div class="u-bordered s-1col s-first">s-1col</div>
+          <div class="u-bordered s-2col">s-2col</div>
+          <div class="u-bordered s-3col">s-3col</div>
+          <div class="u-bordered s-4col">s-4col</div>
+          <div class="u-bordered s-2col s-last">s-2col</div>
+        </div>
+        
+        <br>
+        
+        <div class="row">
+          <div class="u-bordered s-6col m-12col">s-6col m-12col</div>
+          <div class="u-bordered s-6col m-12col m-first">s-6col m-12col</div>
+        </div>
+
+        <div class="row">
+          <div class="u-bordered s-12col l-4col">s-12col l-4col</div>
+          <div class="u-bordered s-12col l-4col ">s-12col s-first l-4col</div>
+          <div class="u-bordered s-12col l-4col ">s-12col s-first l-4col</div>
+        </div>
+        
+        <br>
+
+
+        <span>Nested grid</span> 
+        <div class="row">
+          <div class="u-bordered s-12col l-12col">s-12col</div>
+          <div class="row">
+            <div class="u-bordered s-3col">s-3col</div>
+            <div class="u-bordered s-3col">s-3col</div>
+            <div class="u-bordered s-3col">s-3col</div>
+            <div class="u-bordered s-3col">s-3col</div>
+          </div>
+        </div>
+
+
+      </div><!-- end .grid -->
+
+
+
+
+
+
+
+
+    </div>
+
+
+	</body>
+</html>
+
+
