@@ -15,19 +15,19 @@
 @import "1_utilities/print";
 @import "1_utilities/grid"; 
 
-@import "2_atoms/typography";
-@import "2_atoms/buttons";
-@import "2_atoms/links";
+@import "2_elements/typography";
+@import "2_elements/buttons";
+@import "2_elements/links";
 
-@import "3_molecules/forms";
-@import "3_molecules/lists";
-@import "3_molecules/medias";
-@import "3_molecules/tables";
-@import "3_molecules/navigation";
+@import "3_components/forms";
+@import "3_components/lists";
+@import "3_components/medias";
+@import "3_components/tables";
+@import "3_components/navigation";
 
-@import "4_organisms/header";
-@import "4_organisms/footer";
-@import "4_organisms/sidebar";
+@import "4_layout/header";
+@import "4_layout/footer";
+@import "4_layout/sidebar";
 
 @import "5_templates/layout";
 @import "5_templates/test";
@@ -36,3 +36,4 @@
 @import "5_templates/about";
 @import "5_templates/post";
 
+// Add your vendors files here
