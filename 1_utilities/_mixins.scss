@@ -72,7 +72,7 @@
 
 
 @mixin word-wrap() {
-  word-break:     break-word;
+  word-break:      break-word;
   -webkit-hyphens: auto;
   -moz-hyphens:    auto;
   hyphens:         auto;

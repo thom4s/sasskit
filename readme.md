@@ -71,5 +71,4 @@ For javascript hooks, use js- prefix :
 
 ### todos
 
-- change folder names (atoms, molecules, etc.)
 - clean up da mixins mess 
