@@ -33,79 +33,143 @@
   color: gray; }
 
 .color-2 .color-square {
-  background-color: #f19f35; }
+  background-color: #F19F35; }
 
 .color-2 .color-tone:before {
-  content: "gray_dark"; }
-
-.color-2 .color-name:before {
-  content: "#f19f35"; }
-
-.color-2 .color-use:before {
-  content: "quote"; }
-
-.color_quote {
-  color: gray_dark; }
-
-.color-3 .color-square {
-  background-color: #57bc8a; }
-
-.color-3 .color-tone:before {
   content: "red"; }
 
-.color-3 .color-name:before {
-  content: "#57bc8a"; }
+.color-2 .color-name:before {
+  content: "#F19F35"; }
 
-.color-3 .color-use:before {
-  content: "link"; }
+.color-2 .color-use:before {
+  content: "quotes"; }
 
-.color_link {
+.color_quotes {
   color: red; }
 
+.color-3 .color-square {
+  background-color: #57BC8A; }
+
+.color-3 .color-tone:before {
+  content: "else"; }
+
+.color-3 .color-name:before {
+  content: "#57BC8A"; }
+
+.color-3 .color-use:before {
+  content: "links"; }
+
+.color_links {
+  color: else; }
+
 .color-4 .color-square {
-  background-color: #570c8a; }
+  background-color: #570C8A; }
 
 .color-4 .color-tone:before {
-  content: "red_dark"; }
+  content: "else"; }
 
 .color-4 .color-name:before {
-  content: "#570c8a"; }
+  content: "#570C8A"; }
 
 .color-4 .color-use:before {
-  content: "link_hover"; }
+  content: "links_hover"; }
 
-.color_link_hover {
-  color: red_dark; }
+.color_links_hover {
+  color: else; }
 
 .color-5 .color-square {
   background-color: #036564; }
 
 .color-5 .color-tone:before {
-  content: "blue"; }
+  content: "else"; }
 
 .color-5 .color-name:before {
   content: "#036564"; }
 
 .color-5 .color-use:before {
-  content: "button"; }
+  content: "buttons"; }
 
-.color_button {
-  color: blue; }
+.color_buttons {
+  color: else; }
 
 .color-6 .color-square {
-  background-color: white; }
+  background-color: #fff; }
 
 .color-6 .color-tone:before {
-  content: "white"; }
+  content: "else"; }
 
 .color-6 .color-name:before {
-  content: "white"; }
+  content: "#fff"; }
 
 .color-6 .color-use:before {
   content: "body_background"; }
 
 .color_body_background {
-  color: white; }
+  color: else; }
+
+p {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important; }
+  p:before {
+    content: "This is the body copy. "; }
+  p + span:before {
+    content: "Arial, sans-serif / 16px"; }
+
+quote {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important; }
+  quote:before {
+    content: "A quote very "; }
+  quote + span:before {
+    content: "Arial, sans-serif / 16px"; }
+
+h1 {
+  font-family: Arial, sans-serif !important;
+  font-size: 3em !important; }
+  h1:before {
+    content: "Headings 1"; }
+  h1 + span:before {
+    content: "Arial, sans-serif / 3em"; }
+
+h2 {
+  font-family: Arial, sans-serif !important;
+  font-size: 2em !important; }
+  h2:before {
+    content: "Headings 2"; }
+  h2 + span:before {
+    content: "Arial, sans-serif / 2em"; }
+
+h3 {
+  font-family: Arial, sans-serif !important;
+  font-size: 1.6em !important; }
+  h3:before {
+    content: "Headings 3"; }
+  h3 + span:before {
+    content: "Arial, sans-serif / 1.6em"; }
+
+h4 {
+  font-family: Arial, sans-serif !important;
+  font-size: 1em !important; }
+  h4:before {
+    content: "Headings 4"; }
+  h4 + span:before {
+    content: "Arial, sans-serif / 1em"; }
+
+h5 {
+  font-family: Arial, sans-serif !important;
+  font-size: 1em !important; }
+  h5:before {
+    content: "Headings 5"; }
+  h5 + span:before {
+    content: "Arial, sans-serif / 1em"; }
+
+h6 {
+  font-family: Arial, sans-serif !important;
+  font-size: 16px !important; }
+  h6:before {
+    content: "Headings 6"; }
+  h6 + span:before {
+    content: "Arial, sans-serif / 16px"; }
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
@@ -602,7 +666,6 @@ th {
 
   @page {
     margin: 0.5cm; }
-
   p,
   h2,
   h3 {
@@ -662,6 +725,12 @@ th {
     border: 1px solid;
     float: left;
     margin-left: 2%; }
+    .row .s-1col .s-1col {
+      margin-left: 30.76923%;
+      width: 100%; }
+    .row .s-1col .s-0col {
+      margin-left: 30.76923%;
+      width: -30.76923%; }
   .row .s-1col-push {
     left: 8.33333%; }
   .row .s-1col-pull {
@@ -1025,6 +1094,12 @@ th {
     border: 1px solid;
     float: left;
     margin-left: 2%; }
+    .row .m-1col .m-1col {
+      margin-left: 30.76923%;
+      width: 100%; }
+    .row .m-1col .m-0col {
+      margin-left: 30.76923%;
+      width: -30.76923%; }
   .row .m-1col-push {
     left: 8.33333%; }
   .row .m-1col-pull {
@@ -1388,6 +1463,12 @@ th {
     border: 1px solid;
     float: left;
     margin-left: 2%; }
+    .row .l-1col .l-1col {
+      margin-left: 30.76923%;
+      width: 100%; }
+    .row .l-1col .l-0col {
+      margin-left: 30.76923%;
+      width: -30.76923%; }
   .row .l-1col-push {
     left: 8.33333%; }
   .row .l-1col-pull {
@@ -1751,6 +1832,12 @@ th {
     border: 1px solid;
     float: left;
     margin-left: 2%; }
+    .row .w-1col .w-1col {
+      margin-left: 30.76923%;
+      width: 100%; }
+    .row .w-1col .w-0col {
+      margin-left: 30.76923%;
+      width: -30.76923%; }
   .row .w-1col-push {
     left: 8.33333%; }
   .row .w-1col-pull {
@@ -2114,7 +2201,7 @@ button,
 input,
 select,
 textarea {
-  color: #333333;
+  color: #333;
   font-family: "", Georgia, Times New Roman, serif;
   font-size: 16px;
   line-height: 22px; }
@@ -2545,15 +2632,29 @@ body {
 .guide-date {
   display: block;
   clear: both;
-  color: #999999; }
+  color: #999; }
 
 .guide-title {
   display: block;
-  color: #999999; }
+  color: #999; }
 
 /* TAGLINES */
 .taglines p {
   font-size: 2em; }
+
+/* TYPOS */
+.typo h1, .typo h2, .typo h3, .typo h4, .typo h5, .typo h6 {
+  margin: 0; }
+.typo quote {
+  clear: both; }
+.typo > div {
+  margin-bottom: 20px; }
+
+.typo-name {
+  font-size: 0.8em !important;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0; }
 
 /* COLORS */
 .colors .color {
@@ -2570,7 +2671,7 @@ body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   width: 100px;
   height: 100px;
   float: left;
@@ -2595,3 +2696,5 @@ ul.mood-list {
     float: left;
     font-size: 2em;
     font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */

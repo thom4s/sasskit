@@ -66,6 +66,22 @@
       }
 
 
+      /* TYPOS */
+      .typo {
+        h1, h2, h3, h4, h5, h6 { margin: 0; }
+        quote { clear: both; }
+        
+        & > div {
+          margin-bottom: 20px;
+        }
+      }
+        .typo-name {
+          font-size: 0.8em !important;
+          text-transform: uppercase;
+          color: $gray_light;
+          margin: 0;
+        }
+
       /* COLORS */
       .colors {
         

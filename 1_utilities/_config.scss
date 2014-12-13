@@ -34,61 +34,147 @@ $gray_light:             						#999 !default;
 $gray_lighter:           						#eee !default;
 $white:               	 						#fff !default;
 
-// Colors
+// Colors of Project
 // -------------------------
-$blue:                  						#049cdb !default;
-$blue_dark:              						#0064cd !default;
 
-$colors-list: 
-  text gray #474747, 
-  quote gray_dark #F19F35, 
-  link red #57BC8A,
-  link_hover red_dark #570C8A,
-  button blue #036564,
-  body_background white #fff;
+$colors_map: (
+  text: (
+    tone: gray,
+    hexa: #474747,
+  ), 
+  quotes: (
+    tone: red,
+    hexa: #F19F35,
+  ), 
+  links: (
+    tone: else,
+    hexa: #57BC8A,
+  ),
+  links_hover: (
+    tone: else, 
+    hexa: #570C8A,
+  ),
+  buttons: (
+    tone: else,    
+    hexa: #036564,
+  ),
+  body_background: (
+    tone: else,
+    hexa: #fff,
+  ),
+) !default;
 
-@each $color in $colors-list {
-  $i: index($colors-list, $color);
+// Colors functions
+@each $color in $colors_map {
+  $i: index($colors_map, $color);
 
-  $name: nth($color, 1);
-  $tone: nth($color, 2);
-  $hexa: nth($color, 3);
+  $_type: nth($color, 1);
+  $_values: nth($color, 2);
 
   .color-#{$i} .color-square { 
-    background-color: $hexa;
+    background-color: map-get($_values, hexa);
   }
 
   .color-#{$i} .color-tone:before {
-    content: '#{$tone}';
+    content: '#{map-get($_values, tone)}';
   }
 
   .color-#{$i} .color-name:before {
-    content: '#{$hexa}';
+    content: '#{map-get($_values, hexa)}';
   }
 
   .color-#{$i} .color-use:before {
-    content: '#{$name}';
+    content: '#{$_type}';
   }
 
-  .color_#{$name} {
-    color: $tone;
+  .color_#{$_type} {
+    color: map-get($_values, tone);
   } 
-
 }
+
 
 
 
 // Basic colors
 // -------------------------
 $color_text:           							$gray_dark !default;
-$color_link:            						$blue !default;
-$color_link_hover:      						lighten($color_link, 30%) !default;
+$color_link:            						$gray !default;
+$color_link_hover:      						$gray_dark;
 $color_quote:												$gray_light;
 $color_body_background: 						$white;
 
 
 // Typography
 // -------------------------
+
+$typos_map: (
+  p: (
+    use: "This is the body copy. ",
+    font-family: "Arial, sans-serif",
+    font-size: 16px,
+  ), 
+  quote: (
+    use: "A quote very ",
+    font-family: "Arial, sans-serif",
+    font-size: 16px,
+  ),
+  h1: (
+    use: "Headings 1",
+    font-family: "Arial, sans-serif",
+    font-size: 3em,
+  ),
+  h2: (
+    use: "Headings 2",
+    font-family: "Arial, sans-serif",
+    font-size: 2em,
+  ),
+  h3: (
+    use: "Headings 3",
+    font-family: "Arial, sans-serif",
+    font-size: 1.6em,
+  ),
+  h4: (
+    use: "Headings 4",
+    font-family: "Arial, sans-serif",
+    font-size: 1em,
+  ),
+  h5: (
+    use: "Headings 5",
+    font-family: "Arial, sans-serif",
+    font-size: 1em,
+  ),
+  h6: (
+    use: "Headings 6",
+    font-family: "Arial, sans-serif",
+    font-size: 16px,
+  ),    
+) !default;
+
+
+// Typos functions
+@each $typo in $typos_map {
+  $i: index($typos_map, $typo);
+
+  $_type: nth($typo, 1);
+  $_values: nth($typo, 2);
+
+  #{$_type} {
+    font-family: #{map-get($_values, font-family)} !important;
+    font-size: #{map-get($_values, font-size)} !important;
+
+    &:before {
+      content: '#{map-get($_values, use)}';
+    }
+
+    & + span:before {
+      content: '#{map-get($_values, font-family)} / #{map-get($_values, font-size)}';
+    }
+  }
+
+
+}
+
+
 
 $font_family_sans:        					Arial, Helvetica, sans-serif !default;
 $font_family_serif:       					Georgia, Times New Roman, serif !default;
@@ -113,7 +199,7 @@ $font_size_mini:       						  $font_size_base * 0.75 !default;
 // -------------------------
 
 $input_border_radius:             	0 !default;
-$form_actions_background:        		$blue !default;
+$form_actions_background:        		$gray !default;
 
 $input_disabled_background:					$gray_lighter !default;
 $input_border:											1px solid $black !default;
@@ -154,3 +240,6 @@ $table_background:                  transparent !default;
 $table_background_accent:           $gray_light !default; // for striping
 $table_background_hover:            $gray_dark !default;
 $table_border:                      $gray_dark !default;
+
+
+
