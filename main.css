@@ -17,35 +17,95 @@
  * 
  * @package sasskit
  */
-.color-1 {
+.color-1 .color-square {
   background-color: #474747; }
 
-.color:before {
-  content: "text #474747"; }
+.color-1 .color-tone:before {
+  content: "gray"; }
 
-.color-2 {
+.color-1 .color-name:before {
+  content: "#474747"; }
+
+.color-1 .color-use:before {
+  content: "text"; }
+
+.color_text {
+  color: gray; }
+
+.color-2 .color-square {
   background-color: #f19f35; }
 
-.color:before {
-  content: "quote #f19f35"; }
+.color-2 .color-tone:before {
+  content: "gray_dark"; }
 
-.color-3 {
+.color-2 .color-name:before {
+  content: "#f19f35"; }
+
+.color-2 .color-use:before {
+  content: "quote"; }
+
+.color_quote {
+  color: gray_dark; }
+
+.color-3 .color-square {
   background-color: #57bc8a; }
 
-.color:before {
-  content: "link #57bc8a"; }
+.color-3 .color-tone:before {
+  content: "red"; }
 
-.color-4 {
+.color-3 .color-name:before {
+  content: "#57bc8a"; }
+
+.color-3 .color-use:before {
+  content: "link"; }
+
+.color_link {
+  color: red; }
+
+.color-4 .color-square {
   background-color: #570c8a; }
 
-.color:before {
-  content: "link_hover #570c8a"; }
+.color-4 .color-tone:before {
+  content: "red_dark"; }
 
-.color-5 {
+.color-4 .color-name:before {
+  content: "#570c8a"; }
+
+.color-4 .color-use:before {
+  content: "link_hover"; }
+
+.color_link_hover {
+  color: red_dark; }
+
+.color-5 .color-square {
   background-color: #036564; }
 
-.color:before {
-  content: "button #036564"; }
+.color-5 .color-tone:before {
+  content: "blue"; }
+
+.color-5 .color-name:before {
+  content: "#036564"; }
+
+.color-5 .color-use:before {
+  content: "button"; }
+
+.color_button {
+  color: blue; }
+
+.color-6 .color-square {
+  background-color: white; }
+
+.color-6 .color-tone:before {
+  content: "white"; }
+
+.color-6 .color-name:before {
+  content: "white"; }
+
+.color-6 .color-use:before {
+  content: "body_background"; }
+
+.color_body_background {
+  color: white; }
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
@@ -2450,14 +2510,14 @@ body {
   display: block;
   float: left;
   clear: both;
-  margin: 0 0 40px 0; }
+  margin: 0 0 100px 0; }
 
 .section.title {
   margin: 50px 0 100px 0;
   text-align: center; }
 
 .section.half {
-  width: 48%; }
+  width: 45%; }
 
 .section.half:nth-child(odd) {
   float: left;
@@ -2501,20 +2561,26 @@ body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  width: 100%;
+  width: 50%;
   height: 100px;
-  margin: 0 0 20px; }
+  margin: 0 0 20px;
+  float: left; }
 .colors .color-square {
   /* Acceptable values are border, content, and padding - content is the default W3C model */
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  border: 1px solid #999999;
   width: 100px;
   height: 100px;
   float: left;
   margin: 0 10px 0 0; }
 .colors .color-id {
-  float: left; }
+  float: left;
+  font-size: 0.9em; }
+.colors .color-tone {
+  font-weight: bold;
+  text-transform: uppercase; }
 
 /* MOODS */
 ul.mood-list {

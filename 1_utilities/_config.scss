@@ -40,21 +40,40 @@ $blue:                  						#049cdb !default;
 $blue_dark:              						#0064cd !default;
 
 $colors-list: 
-  text #474747, 
-  quote #F19F35, 
-  link #57BC8A,
-  link_hover #570C8A,
-  button #036564;
+  text gray #474747, 
+  quote gray_dark #F19F35, 
+  link red #57BC8A,
+  link_hover red_dark #570C8A,
+  button blue #036564,
+  body_background white #fff;
 
 @each $color in $colors-list {
   $i: index($colors-list, $color);
 
-  .color-#{$i} { 
-    background-color: nth($color, 2);
+  $name: nth($color, 1);
+  $tone: nth($color, 2);
+  $hexa: nth($color, 3);
+
+  .color-#{$i} .color-square { 
+    background-color: $hexa;
   }
-  .color:before {
-    content: '#{$color}';
+
+  .color-#{$i} .color-tone:before {
+    content: '#{$tone}';
   }
+
+  .color-#{$i} .color-name:before {
+    content: '#{$hexa}';
+  }
+
+  .color-#{$i} .color-use:before {
+    content: '#{$name}';
+  }
+
+  .color_#{$name} {
+    color: $tone;
+  } 
+
 }
 
 
@@ -70,6 +89,7 @@ $color_body_background: 						$white;
 
 // Typography
 // -------------------------
+
 $font_family_sans:        					Arial, Helvetica, sans-serif !default;
 $font_family_serif:       					Georgia, Times New Roman, serif !default;
 $font_family_mono:        					Menlo, Consolas, monospace !default;		
