@@ -39,6 +39,25 @@ $white:               	 						#fff !default;
 $blue:                  						#049cdb !default;
 $blue_dark:              						#0064cd !default;
 
+$colors-list: 
+  text #474747, 
+  quote #F19F35, 
+  link #57BC8A,
+  link_hover #570C8A,
+  button #036564;
+
+@each $color in $colors-list {
+  $i: index($colors-list, $color);
+
+  .color-#{$i} { 
+    background-color: nth($color, 2);
+  }
+  .color:before {
+    content: '#{$color}';
+  }
+}
+
+
 
 // Basic colors
 // -------------------------
