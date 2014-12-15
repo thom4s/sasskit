@@ -6,12 +6,29 @@
 
 
 
+/* 
+ * GRID VARIABLES SETTING
+ */
+
+$max_width:                         980px;
+$cols:                              12 !default;
+$gutter:                            2% !default;
+        
+$mobile_first:                      true !default;
+$minimal_breakpoint:                320px !default;
+$medium_breakpoint:                 760px !default;
+$large_breakpoint:                  980px !default;
+$wide_breakpoint:                   1200px !default;
+
+
 $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 
 
+
 /* 
- * Mixins for the grid to be 
+ * DON'T TOUCHE THIS !
  */
+
 @mixin cols($num) {
     @include box-sizing();
     width: ($one_col * $num) + ($gutter * ($num - 1));
@@ -61,7 +78,7 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 
 
 /* 
- * COLUMNS & NESTED COLUMNS
+ * GRID GENERATOR
  */
 
 @if $mobile_first {
