@@ -42,41 +42,49 @@ $typos_map: (
     use: "This is the body copy. ",
     font-family: $font_family_paragraph,
     font-size: 16px,
-  ), 
+    line-height: $base_line_height,
+ ), 
   blockquote: (
     use: "A quote very ",
     font-family: $font_family_quote,
     font-size: 20px,
+    line-height: $base_line_height,
   ),
   h1: (
     use: "Headings 1",
     font-family: $font_family_title,
     font-size: 3em,
+    line-height: 0.8em,
   ),
   h2: (
     use: "Headings 2",
     font-family: $font_family_title,
     font-size: 2em,
+    line-height: 0.8em,   
   ),
   h3: (
     use: "Headings 3",
     font-family: $font_family_title,
     font-size: 1.6em,
+    line-height: 0.8em,
   ),
   h4: (
     use: "Headings 4",
     font-family: $font_family_title,
     font-size: 1em,
+    line-height: 0.8em,
   ),
   h5: (
     use: "Headings 5",
     font-family: $font_family_title,
     font-size: 1em,
+    line-height: 0.8em,
   ),
   h6: (
     use: "Headings 6",
     font-family: $font_family_title,
     font-size: 16px,
+    line-height: 0.8em,
   ),    
 ) !default;
 
@@ -169,15 +177,18 @@ big {
   $_values: nth($typo, 2);
 
   #{$_type} {
-    font-family: #{map-get($_values, font-family)} !important;
-    font-size: #{map-get($_values, font-size)} !important;
+    font-family: #{map-get($_values, font-family)};
+    font-size: #{map-get($_values, font-size)};
+    @if map-get($_values, line-height) {
+      line-height: #{map-get($_values, line-height)};
+    }
 
     &:before {
       content: '#{map-get($_values, use)}';
     }
 
     & + span:before {
-      content: '#{map-get($_values, font-family)} / #{map-get($_values, font-size)}';
+      content: '#{map-get($_values, font-family)} / #{map-get($_values, font-size)} / #{map-get($_values, line-height)}';
     }
   }
 }

@@ -10,18 +10,17 @@
  * GRID VARIABLES SETTING
  */
 
-$max_width:                         980px;
-$cols:                              12 !default;
-$gutter:                            2% !default;
+$max_width:                         980px; // To Be Modify
+$cols:                              12 !default; // To Be Modify
+$gutter:                            2% !default; // To Be Modify
         
-$mobile_first:                      true !default;
-$minimal_breakpoint:                320px !default;
-$medium_breakpoint:                 760px !default;
-$large_breakpoint:                  980px !default;
-$wide_breakpoint:                   1200px !default;
+$mobile_first:                      true !default; // To Be Modify
+$minimal_breakpoint:                320px !default; // To Be Modify
+$medium_breakpoint:                 760px !default; // To Be Modify
+$large_breakpoint:                  980px !default; // To Be Modify
+$wide_breakpoint:                   1200px !default; // To Be Modify
 
 
-$one_col: (100% - ($gutter * ($cols - 1))) / $cols;
 
 
 
@@ -29,10 +28,11 @@ $one_col: (100% - ($gutter * ($cols - 1))) / $cols;
  * DON'T TOUCHE THIS !
  */
 
+$one_col: (100% - ($gutter * ($cols - 1))) / $cols;
+
 @mixin cols($num) {
     @include box-sizing();
     width: ($one_col * $num) + ($gutter * ($num - 1));
-    border: 1px solid;
 }
  
 @mixin sub_cols($num_child, $num_parent) {

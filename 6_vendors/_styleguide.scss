@@ -144,8 +144,21 @@
 
 
 
+      /* GRID */ 
+      .grid {
+        font-size: 0.8em;
+        color: $gray;
+        .row {
+          margin-bottom: 20px;
+          border: 1px dotted $gray_light;
+        }
+      }
 
-
+      .grided {
+        background-color: $gray_lighter;
+        border: none;
+        margin-bottom: 10px;
+      }
 
 
 
