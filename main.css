@@ -584,6 +584,15 @@ blockquote {
   blockquote + span:before {
     content: ", Georgia, Times New Roman, serif / 20px / 22px"; }
 
+ul {
+  font-family: , Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 22px; }
+  ul:before {
+    content: "u lists"; }
+  ul + span:before {
+    content: ", Arial, Helvetica, sans-serif / 1em / 22px"; }
+
 h1 {
   font-family: , Arial, Helvetica, sans-serif;
   font-size: 3em;

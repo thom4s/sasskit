@@ -50,6 +50,12 @@ $typos_map: (
     font-size: 20px,
     line-height: $base_line_height,
   ),
+  ul: (
+    use: "u lists",
+    font-family: $font_family_title,
+    font-size: 1em,
+    line-height: $base_line_height,
+  ),
   h1: (
     use: "Headings 1",
     font-family: $font_family_title,
