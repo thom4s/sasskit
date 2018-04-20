@@ -60,31 +60,5 @@
 
 
 
-// MENU MOBILE
-.navigation-trigger {
-  @include box-sizing();
-  width: 100%;
-  float: left;
-  padding: 0;
-  border-bottom: 10px solid #aaa;
-  padding: 5px 0;
-
-  @include at-least(medium){
-    display: none;
-  }
-}
-  #trigger-out {
-    display: none;
-    position: absolute;
-    right: 11px;
-    top: 11px;
-
-    &:hover {
-      cursor: pointer;
-    }
-    @include up-to(medium) {
-      display: block;
-    }
-  }
 
 
